@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "aws-tasks",
+    "name": "AWS Tasks",
+    "version": "0.0.4",
+    "publisher": "jin-aft",
+    "public": false,
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/jinhong-/vsts-aws-tasks"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "readme.md"
+        }
+    },
+    "description": "AWS Tasks.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "tasks/s3-upload"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "s3-upload",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/s3-upload"
+            }
+        }
+    ]
+}

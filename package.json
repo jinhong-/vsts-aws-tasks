@@ -1,0 +1,23 @@
+{
+  "name": "vsts-aws-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhong-/vsts-aws-tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinhong-/vsts-aws-tasks/issues"
+  },
+  "homepage": "https://github.com/jinhong-/vsts-aws-tasks#readme",
+  "dependencies": {
+    "aws-sdk": "^2.87.0",
+    "vsts-task-lib": "^2.0.6"
+  }
+}
