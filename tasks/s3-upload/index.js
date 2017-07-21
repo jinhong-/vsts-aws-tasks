@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const tl = require('vsts-task-lib/task');
 const path = require('path');
+const fs = require('fs');
+
 
 const accessKeyId = tl.getInput('accessKeyId', true);
 const secretAccessKey = tl.getInput('secretAccessKey', true);
@@ -23,13 +25,16 @@ var s3 = new AWS.S3({
 
 tl.debug('Uploading file...');
 
+var body = fs.createReadStream(file);
+
 s3.upload({
     Key: path.basename(file),
-    Body: file,
+    Body: body,
     ACL: 'public-read'
 }, function (err, data) {
     if (err) {
         tl.setResult(tl.TaskResult.Failed, `Failed with error: ${err}`);
     }
+    
     tl.setResult(tl.TaskResult.Succeeded, 'Update completed')
 });

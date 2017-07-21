@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "aws-tasks",
     "name": "AWS Tasks",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "publisher": "jin-aft",
     "public": false,
     "repository": {
